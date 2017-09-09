@@ -1,20 +1,17 @@
-
 # microservice-async
-
-[![Build Status](https://travis-ci.org/hmrc/microservice-async.svg?branch=master)](https://travis-ci.org/hmrc/microservice-async) [ ![Download](https://api.bintray.com/packages/hmrc/releases/microservice-async/images/download.svg) ](https://bintray.com/hmrc/releases/microservice-async/_latestVersion)
 
 Library extends the play-async library to provide extensions for both a mongo cache repository and the filter SessionCookieCryptoFilter is used to support state between service API calls.
 
-
+[This based off a forked from [/hmrc/microservice-async](https://github.com/hmrc/microservice-async)]
 
 ## Installing
 
 Include the following dependency in your SBT build
 
 ``` scala
-resolvers += Resolver.bintrayRepo("hmrc", "releases")
+resolvers += Resolver.bintrayRepo("equalexperts", "open-source")
 
-libraryDependencies += "uk.gov.hmrc" %% "microservice-async" % "[INSERT-VERSION]"
+libraryDependencies += "com.equalexperts" %% "microservice-async" % "[INSERT-VERSION]"
 ```
 
 ### License

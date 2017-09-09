@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 HM Revenue & Customs
+ * Copyright 2017 Equal Experts
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.msasync.filter
+package com.equalexperts.msasync.filter
 
 import org.mockito.ArgumentCaptor
 import org.mockito.Matchers._
