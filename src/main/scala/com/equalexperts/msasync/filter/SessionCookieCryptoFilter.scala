@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.msasync.filter
+package com.equalexperts.msasync.filter
 
 import akka.actor.ActorSystem
 import akka.stream.{Materializer, ActorMaterializer}

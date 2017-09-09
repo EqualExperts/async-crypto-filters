@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.msasync.config
+package com.equalexperts.msasync.config
 
-import uk.gov.hmrc.msasync.filter.SessionCookieCryptoFilter
+import com.equalexperts.msasync.filter.SessionCookieCryptoFilter
 
 object CookieSessionFilter {
   def SessionCookieFilter = Seq(SessionCookieCryptoFilter)

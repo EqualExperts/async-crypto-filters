@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.msasync.repository
+package com.equalexperts.msasync.repository
 
 import play.api.libs.json._
 import play.modules.reactivemongo.MongoDbConnection
