@@ -1,0 +1,45 @@
+version: 2
+jobs:
+  build:
+    executorType: docker
+    docker:
+      - image: hseeberger/scala-sbt
+      - image: circleci/mongo:latest
+    working_directory: /root/microservice-async/
+
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restoring Cache
+          keys:
+            - sbt
+
+      - setup_remote_docker
+
+      - run:
+          name: Prepare
+          command: sbt update exit
+
+      - save_cache:
+          name: Saving Cache sbt
+          key: sbt
+          paths:
+            - "/root/.sbt"
+            - "/root/.ivy2"
+      - run:
+          pre:
+            service mongod status || service mongod start
+          name: Test
+          command:
+            sbt test exit
+
+      - deploy:
+            name: Publish
+            command: |
+              if [ "${CIRCLE_BRANCH}" == "master" ];
+                then sbt package publish exit;
+              fi
+
+      - store_test_results:
+          path:
+            target/test-reports
