@@ -15,6 +15,7 @@ organizationHomepage := Some(url("https://www.equalexperts.com"))
 organization := "com.equalexperts"
 
 resolvers := Seq(
+  Resolver.bintrayRepo("equalexperts", "open-source-release-candidates"),
   Resolver.bintrayRepo("hmrc", "releases"),
   Resolver.typesafeRepo("releases")
 )
