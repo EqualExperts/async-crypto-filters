@@ -1,5 +1,7 @@
 # microservice-async
 
+[ ![Download](https://api.bintray.com/packages/equalexperts/open-source-release-candidates/microservice-async/images/download.svg) ](https://bintray.com/equalexperts/open-source-release-candidates/microservice-async/_latestVersion)
+
 Library extends the play-async library to provide extensions for both a mongo cache repository and the filter SessionCookieCryptoFilter is used to support state between service API calls.
 
 ### Installing
