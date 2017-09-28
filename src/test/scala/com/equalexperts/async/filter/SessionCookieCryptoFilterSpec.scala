@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.equalexperts.msasync.filter
+package com.equalexperts.async.filter
 
 import org.mockito.ArgumentCaptor
 import org.mockito.Matchers._

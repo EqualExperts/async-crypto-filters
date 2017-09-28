@@ -1,20 +1,20 @@
 FROM hseeberger/scala-sbt
 
-WORKDIR /microservice-async
+WORKDIR /async-crypto-filters
 
-COPY ./.git /microservice-async/.git/
+COPY ./.git /async-crypto-filters/.git/
 
-COPY ./build.sbt /microservice-async
+COPY ./build.sbt /async-crypto-filters
 
-COPY ./bintray.sbt /microservice-async
+COPY ./bintray.sbt /async-crypto-filters
 
-COPY ./LICENSE /microservice-async
+COPY ./LICENSE /async-crypto-filters
 
-COPY ./project/*.sbt /microservice-async/project/
+COPY ./project/*.sbt /async-crypto-filters/project/
 
-COPY ./project/*.scala /microservice-async/project/
+COPY ./project/*.scala /async-crypto-filters/project/
 
-COPY ./src /microservice-async/src/
+COPY ./src /async-crypto-filters/src/
 
 RUN sbt test
 

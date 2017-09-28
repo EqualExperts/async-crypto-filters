@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.equalexperts.msasync.config
-
-import com.equalexperts.msasync.filter.SessionCookieCryptoFilter
+package com.equalexperts.async.config
 
 object CookieSessionFilter {
+  import com.equalexperts.async.filter.SessionCookieCryptoFilter
+
   def SessionCookieFilter = Seq(SessionCookieCryptoFilter)
 }

@@ -1,26 +1,42 @@
-# microservice-async
+# async-crypto-filters
 
-[ ![Download](https://api.bintray.com/packages/equalexperts/open-source-release-candidates/microservice-async/images/download.svg) ](https://bintray.com/equalexperts/open-source-release-candidates/microservice-async/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/equalexperts/open-source-release-candidates/async-crypto-filters/images/download.svg) ](https://bintray.com/equalexperts/open-source-release-candidates/async-crypto-filters/_latestVersion)
+[![CircleCI](https://circleci.com/gh/EqualExperts/async-crypto-filters.svg?style=svg)](https://circleci.com/gh/EqualExperts/async-crypto-filters)
 
-Library extends the play-async library to provide extensions for both a mongo cache repository and the filter SessionCookieCryptoFilter is used to support state between service API calls.
+Library to provide a Play filter implementation for encryption and session cookies for use with [play-async](https://github.com/EqualExperts/play-async)
+
 
 ### Installing
 
 Include the following dependency in your SBT build
 
-``` scala
+* Release candidate versions
+
+[ ![Download](https://api.bintray.com/packages/equalexperts/open-source-release-candidates/async-crypto-filters/images/download.svg) ](https://bintray.com/equalexperts/open-source-release-candidates/async-crypto-filters/_latestVersion)
+
+```scala
+resolvers += Resolver.bintrayRepo("equalexperts", "open-source-release-candidates")
+
+libraryDependencies += "com.equalexperts" %% "async-crypto-filters" % "[INSERT-VERSION]"
+```
+
+* Released versions
+
+TBC
+
+```scala
 resolvers += Resolver.bintrayRepo("equalexperts", "open-source")
 
-libraryDependencies += "com.equalexperts" %% "microservice-async" % "[INSERT-VERSION]"
+libraryDependencies += "com.equalexperts" %% "async-crypto-filters" % "[INSERT-VERSION]"
 ```
 
 ### Building with Docker
 
-`docker build -t emailaddress:latest .`
+`docker build -t async-crypto-filters:latest .`
 
 ### Publishing with Docker
 
-`docker run -v ~/.ivy2:/root/.ivy2 -t emailaddress:latest`
+`docker run -v ~/.ivy2:/root/.ivy2 -t async-crypto-filters:latest`
 
 
 ## Contributors 

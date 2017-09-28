@@ -2,33 +2,35 @@ version: 2
 jobs:
   build:
     executorType: docker
+    working_directory: ~/async-crypto-filters
     docker:
-      - image: hseeberger/scala-sbt
-      - image: circleci/mongo:latest
-    working_directory: /root/microservice-async/
-
+      - image: codestar/circleci-scala-sbt-git:scala-2.12.2-sbt-0.13.15
+    environment:
+        SBT_VERSION: 0.13.16
+        SCALA_VERSION: 2.11.11
     steps:
       - checkout
       - restore_cache:
-          name: Restoring Cache
           keys:
-            - sbt
-
-      - setup_remote_docker
+            - my-project-{{ checksum "build.sbt" }}
+            - my-project
 
       - run:
           name: Prepare
           command: sbt update exit
 
       - save_cache:
-          name: Saving Cache sbt
-          key: sbt
+          key: my-project-{{ checksum "build.sbt" }}
           paths:
-            - "/root/.sbt"
-            - "/root/.ivy2"
+            - target/resolution-cache
+            - target/streams
+            - project/target/resolution-cache
+            - project/target/streams
+            - ~/.sbt
+            - ~/.iv2/cache
+            - ~/.m2
+
       - run:
-          pre:
-            service mongod status || service mongod start
           name: Test
           command:
             sbt test exit
